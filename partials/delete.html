@@ -1,0 +1,53 @@
+<div class="container">
+    <form name="deleteForm" ng-submit="deleteSubmit()">
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Czy napewno chcesz usunąć element <b>{{editedItem.name}} </b>?
+
+            <button type="submit" class="btn btn-success" ng-click="delItem(editedItem)">
+                <span class="glyphicon glyphicon-ok-sign"></span>
+            </button>
+            <button type="submit" class="btn btn-success" ng-click="closeEntry()">
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </button>
+        </div>
+
+        <!--
+        <table class="table table-striped">
+            <caption>Czy na pewno chcesz usunąć element</caption>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" class="form-control" id="name" ng-model="editedItem.name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Old price:</td>
+                    <td>
+                        <input type="text" class="form-control" id="old_price" ng-model="editedItem.price_to_sell">
+                    </td>
+                </tr>
+                <tr>
+                    <td>New price:</td>
+                    <td>
+                        <input type="text" class="form-control" id="new_price" ng-model="editedItem.price_to_buy">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Link:</td>
+                    <td>
+                        <input type="text" class="form-control" id="link" ng-model="editedItem.link">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="submit" class="btn btn-success" ng-click="editClose()">Close</button>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>-->
+    </form>
+</div>

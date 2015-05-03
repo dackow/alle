@@ -1,0 +1,43 @@
+<div class="container">
+    <form name="addForm" ng-submit="addSubmit()">
+        <table class="table table-striped">
+            <caption>Add a new element</caption>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text" class="form-control" name="name" ng-model="newItem.name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Old price:</td>
+                    <td>
+                        <input type="text" class="form-control" name="old_price" ng-model="newItem.price_to_sell" number>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New price:</td>
+                    <td>
+                        <input type="text" class="form-control" name="new_price" ng-model="newItem.price_to_buy">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Link:</td>
+                    <td>
+                        <input type="text" class="form-control" name="link" ng-model="newItem.link">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <button type="submit" class="btn btn-success" ng-disabled="!validate()"><span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <button type="button" class="btn btn-success" ng-click="closeEntry()"><span class="glyphicon glyphicon-remove-sign"></span>
+                            </button>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

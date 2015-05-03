@@ -1,0 +1,98 @@
+<html ng-app="Allegro">
+
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    
+    <script src="js/apps.js"></script>
+    
+    <script src="js/services/ModelService.js"></script>
+    <script src="js/services/DataProvider.js"></script>
+    
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/AddController.js"></script>
+    <script src="js/controllers/EditController.js"></script>
+    <script src="js/controllers/DeleteController.js"></script>
+    
+    <meta charset="utf-8" />
+    <title>Allegro Cash Summary</title>
+</head>
+
+<body ng-controller="MainController">
+    <div class="container">
+        <table class="table table-striped" id="cssTable">
+            <thead>
+                <tr class="info">
+                    <th>Id</th>
+                    <th>Nazwa</th>
+                    <th>Sprzedajesz za</th>
+                    <th>Kupiłaś za</th>
+                    <th>Zysk</th>
+                    <th>Link do aukcji</th>
+                    <th>Płatność</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in allItems|filter:{active: true}">
+                    <td>{{$index+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price_to_sell}}</td>
+                    <td>{{item.price_to_buy}}</td>
+                    <td>{{item.price_to_sell - item.price_to_buy}}</td>
+                    <td><a href="{{item.link}}">Link</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" ng-model="item.payment_confirmed">
+                    </td>
+                    <td>
+                        <div ng-controller="EditController">
+                            <button type="button" class="btn btn-primary" ng-click="go('/edit/'+item.id)">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div ng-controller="DeleteController">
+                            <button type="button" class="btn btn-danger" ng-click="go('/del/'+item.id)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="danger">
+                    <td colspan="3">
+
+                    </td>
+                    <td><b>{{sumSell}}</b>
+                    </td>
+                    <td><b>{{sumBuy}}</b>
+                    </td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr class="warning">
+                    <td colspan="8"></td>
+                    <td>
+                        <div ng-controller="AddController">
+                            <button type="button" class="btn btn-success" ng-click="go('/add')">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-view></ng-view>
+    <div class="container">
+        <pre>Status</pre>
+    </div>
+</body>
+
+</html>

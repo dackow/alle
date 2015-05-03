@@ -1,0 +1,125 @@
+time=2015-04-16 09:12:34,849 +0200
+timestamp=1429168354849
+level=TRACE
+logger=com.scc.smx.SA.SCC_INT_GIS_IOE
+thread=pool-flow.seda.servicemix-saxon-thread-2
+endpoint=route-00_httpServer
+sa_name=SCC_INT_GIS_IOE
+from=08_BuildSpecTubeStr
+to=09_GeneClient
+foreignKey=4460506:35:1
+transactionId=3:c27dcde1-4526-4123-ad38-b092485d1548
+TraceID{host=Q139@wp139,logSource=/Q/139u/db/dat/I/esb/logs/inst/esb_farm/smx_01-wp139/SCC_INT_GIS_IOE/2015/04/16/message.log.150416-003035132,eventID=,uniqueID=330813,length=5562}
+actual_length=4593
+message=[3] 08_BuildSpecTubeStr -> 09_GeneClient: len=4593 : <?xml version="1.0" encoding="UTF-8"?>
+<SubmitUpdateOrderAndAttachments xmlns="http://www.softcomputer.com/RequisitionOrderingService/"
+                                 xmlns:fun="http://interfaces_function.com"
+                                 xmlns:trf1="http://www.softcomputer.com/SoftGeneIntegration/OEInService/">
+   
+   <orderRequisition>
+      <Sec xmlns="http://www.softcomputer.com/SoftGeneOrderingService/">
+         <System xmlns="http://www.softcomputer.com/CommonTypes/">SOFTLAB</System>
+         <UserID xmlns="http://www.softcomputer.com/CommonTypes/">SCC</UserID>
+         <Terminal xmlns="http://www.softcomputer.com/CommonTypes/">A6488</Terminal>
+      </Sec>
+      <Patient xmlns="http://www.softcomputer.com/SoftGeneOrderingService/">
+         <MRN>TEST</MRN>
+      </Patient>
+      <Visit xmlns="http://www.softcomputer.com/SoftGeneOrderingService/">
+         <BillingNum>57248</BillingNum>
+      </Visit>
+      <Order xmlns="http://www.softcomputer.com/SoftGeneOrderingService/">
+         <AuxiliaryOrder>1617000000</AuxiliaryOrder>
+         <SecondaryAuxiliaryOrder/>
+         <PatientType/>
+         <OrderedOn>2015-04-16T08:10:00</OrderedOn>
+         <OrderingDepartment>LSBD1</OrderingDepartment>
+         <OrderingClinic>10043</OrderingClinic>
+         <Priority>R</Priority>
+         <RequestingDoctor>
+            <DoctorID>XUYN7</DoctorID>
+         </RequestingDoctor>
+         <MRNAssignAuth>
+            <ID/>
+            <NSID/>
+            <Type/>
+         </MRNAssignAuth>
+         <SecAssignAuth>
+            <ID/>
+            <NSID/>
+            <Type/>
+         </SecAssignAuth>
+         <Depot>S0</Depot>
+         <Specimens xmlns:specord="http://www.softcomputer.com/SoftGeneOrderingService/">
+            <SpecimenType>BLOOD</SpecimenType>
+            <SpecimenNumber/>
+            <ExternalId>18966</ExternalId>
+            <CollectedBy>SCC</CollectedBy>
+            <CollectedOn>2015-04-16T08:10:00</CollectedOn>
+            <DrawType/>
+            <PartialCollectionDateTime>N</PartialCollectionDateTime>
+            <Position>1</Position>
+            <SpecimenAttributes>
+                  <Code>TYPE</Code>
+                  <Value>BLOOD</Value>
+               </SpecimenAttributes>
+            <Tubes>
+               <TubeNumber/>
+               <ExternalId>18966</ExternalId>
+               <TubeCode>LAV000</TubeCode>
+               <ExtTubeBarcode/>
+               <SendToDestinationDepartment>true</SendToDestinationDepartment>
+               <Volume/>
+               <ReceivedBy>SCC</ReceivedBy>
+               <RecivedOn>2015-04-16T08:10:00</RecivedOn>
+               <ReceiptedBy>SCC</ReceiptedBy>
+               <ReceiptedOn>2015-04-16T08:10:00</ReceiptedOn>
+               <DummyTube>N</DummyTube>
+            </Tubes>
+         </Specimens>
+         <Tests xmlns:specord="http://www.softcomputer.com/SoftGeneOrderingService/">
+            <TestRefCode>LSBT1</TestRefCode>
+            <TestNumber/>
+            <AttachedTubes>
+               <ExternalId>18966</ExternalId>
+            </AttachedTubes>
+            <HoldRelease>N</HoldRelease>
+            <Priority>R</Priority>
+            <OrderedOn>2015-04-16T08:10:00</OrderedOn>
+            <OrderedOn>2015-04-16T08:10:00</OrderedOn>
+            <PerfLocation>BIO</PerfLocation>
+            <OrdClinic>10043</OrdClinic>
+            <OrdDepartment>LSBD1</OrdDepartment>
+            <NoCharge>false</NoCharge>
+            <OrderingWorkstation>LSBW1</OrderingWorkstation>
+            <Components>
+                  <TestRefCode>LSBT1</TestRefCode>
+                  <AttachedTubes>
+                     <ExternalId>18966</ExternalId>
+                  </AttachedTubes>
+                  <OrderingWorkstation>LSBW1</OrderingWorkstation>
+                  <PerfLocation>BIO</PerfLocation>
+                  <RecDTInDepartment>2015-04-16T08:10:00</RecDTInDepartment>
+                  <Absorbed>N</Absorbed>
+               </Components>
+            <OrderingDoctor>
+                  <DoctorID>XUYN7</DoctorID>
+               </OrderingDoctor>
+            <OrdService/>
+            <ResultHandling/>
+            <GlobalID>1</GlobalID>
+            <GenSeqNumber>1</GenSeqNumber>
+            <Absorbed>N</Absorbed>
+            <Duplicated>N</Duplicated>
+         </Tests>
+         <Diagnosises>
+            <DgnCode/>
+         </Diagnosises>
+      </Order>
+   </orderRequisition>
+   <release xmlns:reqser="http://www.softcomputer.com/RequisitionOrderingService/"
+            xmlns:tests="http://www.softcomputer.com/SoftGeneOrderingService/">true</release>
+</SubmitUpdateOrderAndAttachments>
+properties={com.scc.smx.transactionID=3:c27dcde1-4526-4123-ad38-b092485d1548, trace.foreign.MOM_ID=4460506:35:1, org.apache.servicemix.soap.headers={{http://mom.scc.com/}Muti=[#document-fragment: null]}}
+attachments={}
+splits={}
